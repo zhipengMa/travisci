@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020/7/3 5:29 下午
  */
 @RestController
-@RequestMapping("/hello")
+@RequestMapping("/travis")
 public class HelloWordController {
 
-	@GetMapping("/world")
+	@GetMapping
 	public String helloWorld() {
 		return "hello world!";
 	}
