@@ -1,7 +1,5 @@
 language: java
-before_script:
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 jdk:
   - openjdk8
 script:
-  - mvn test -B
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
