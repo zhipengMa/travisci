@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/user?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://rm-2zel09ln911339663wo.mysql.rds.aliyuncs.com:3306/user?useUnicode=true&characterEncoding=utf8&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8
     username: root
-    password: 123456
+    password: kI3ivbc3vkytQZBU
     hikari:
       maximum-pool-size: 5
       minimum-idle: 5
