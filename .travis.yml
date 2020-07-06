@@ -8,4 +8,4 @@ script:
   - mv ./target/travisci-0.0.1-SNAPSHOT.jar ./
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t travis .
-  - docker push zhipengma/travisci:travis:latest
+  - docker push zhipengma/travisci:v1
