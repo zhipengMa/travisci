@@ -6,8 +6,4 @@ services:
 script:
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mv ./target/travisci-0.0.1-SNAPSHOT.jar ./
-deploy:
-  provider: script
-  script: bash pushdocker.sh
-  on:
-    branch: master
+  - bash pushdocker.sh
