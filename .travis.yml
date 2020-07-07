@@ -6,7 +6,8 @@ services:
 script:
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mv ./target/travisci-0.0.1-SNAPSHOT.jar ./
-  - sudo echo "$DOCKER_PASSWORD" | docker login --username="$DOCKER_USERNAME" registry.cn-beijing.aliyuncs.com --password-stdin
-  - sudo docker build -t travis .
-  - sudo docker tag $(docker images -q --filter reference=travis*:*) registry.cn-beijing.aliyuncs.com/zhipengma/travis-ci:latest
-  - sudo docker push registry.cn-beijing.aliyuncs.com/zhipengma/travis-ci:latest
+deploy:
+  provider: script
+  script: bash pushdocker.sh
+  on:
+    branch: master
